@@ -1,0 +1,6 @@
+SELECT name 
+FROM(SELECT member.name, COUNT(member.id) as num
+FROM member, checkout_item
+WHERE member.id = checkout_item.member_id
+GROUP BY member.id)
+WHERE num > 1;

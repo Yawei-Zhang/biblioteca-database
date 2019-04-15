@@ -1,0 +1,4 @@
+SELECT COUNT(member_id)
+FROM ( SELECT member_id
+	FROM checkout_item
+	GROUP BY member_id);
